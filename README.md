@@ -18,7 +18,7 @@ This Terraform module creates structured vpc for GCP resources with specific att
 ## Example: vpc
 ```hcl
 module "vpc" {
-  source                                    = "git::https://github.com/opsstation/terraform-gcp-vpc.git"
+  source                                    = "git::https://github.com/yadavprakash/terraform-gcp-vpc.git"
   name                                      = "dev"
   environment                               = "test"
   label_order                               = ["name", "environment"]
@@ -45,14 +45,14 @@ Please ensure you specify the correct 'source' path for the module.
 - This module currently does not provide any outputs.
 
 # Examples
-For detailed examples on how to use this module, please refer to the [example](https://github.com/opsstation/terraform-gcp-vpc/tree/master/_example) directory within this repository.
+For detailed examples on how to use this module, please refer to the [example](https://github.com/yadavprakash/terraform-gcp-vpc/tree/master/_example) directory within this repository.
 
 ## Authors
 Your Name
 Replace '[License Name]' and '[Your Name]' with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/opsstation/terraform-gcp-vpc/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/yadavprakash/terraform-gcp-vpc/blob/master/LICENSE) file for details.
 
 
 
@@ -74,7 +74,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | git::git@github.com:opsstation/terraform-gcp-labels.git | v1.0.0 |
+| <a name="module_labels"></a> [labels](#module\_labels) | git::git@github.com:yadavprakash/terraform-gcp-labels.git | v1.0.0 |
 
 ## Resources
 
@@ -96,7 +96,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 | <a name="input_google_compute_network_enabled"></a> [google\_compute\_network\_enabled](#input\_google\_compute\_network\_enabled) | A boolean flag to enable/disable vpc. | `bool` | `true` | no |
 | <a name="input_internal_ipv6_range"></a> [internal\_ipv6\_range](#input\_internal\_ipv6\_range) | (Optional) When enabling ula internal ipv6, caller optionally can specify the /48 range they want from the google defined ULA prefix fd20::/20. The input must be a valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will fail if the speficied /48 is already in used by another resource. If the field is not speficied, then a /48 range will be randomly allocated from fd20::/20 and returned via this field. | `bool` | `null` | no |
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. sequence of application name and environment `name`,`environment`,'attribute' [`webserver`,`qa`,`devops`,`public`,] . | `list(any)` | `[]` | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy,opsstation'. | `string` | `"opsstation'."` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy,yadavprakash'. | `string` | `"yadavprakash'."` | no |
 | <a name="input_mtu"></a> [mtu](#input\_mtu) | (Optional) Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes. Default is '1460'. | `number` | `1460` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no |
 | <a name="input_network_firewall_policy_enforcement_order"></a> [network\_firewall\_policy\_enforcement\_order](#input\_network\_firewall\_policy\_enforcement\_order) | (Optional) Set the order that Firewall Rules and Firewall Policies are evaluated. Default value is AFTER\_CLASSIC\_FIREWALL. Possible values are: BEFORE\_CLASSIC\_FIREWALL, AFTER\_CLASSIC\_FIREWALL | `string` | `"AFTER_CLASSIC_FIREWALL"` | no |
