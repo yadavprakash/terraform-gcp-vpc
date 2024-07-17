@@ -5,7 +5,7 @@ provider "google" {
 }
 
 module "labels" {
-  source      = "git::git@github.com:opsstation/terraform-gcp-labels.git?ref=v1.0.0"
+  source      = "git::git@github.com:yadavprakash/terraform-gcp-labels.git?ref=v1.0.0"
   name        = "labels"
   environment = "test"
   label_order = ["name", "environment"]
